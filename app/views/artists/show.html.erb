@@ -1,0 +1,13 @@
+<% if flash[:success]%>
+    <h1 style= 'color: green;'> <%= flash[:success] %></h1>
+<% end %>
+
+<p>Name: <%= @artist.name %></p>
+<p>Age: <%= @artist.age %></p>
+<p>Title: <%= @artist.title %></p>
+
+<% @artist.instruments.uniq.each do |instrument|  %>
+   <p> <%= instrument.name %></p>
+<% end %>
+
+
